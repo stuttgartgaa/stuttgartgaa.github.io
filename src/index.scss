@@ -1,0 +1,282 @@
+// Override default variables before the import
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import "./src/styles/custom.scss";
+@import "~bootstrap/scss/bootstrap";
+y #app {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 80px; /* Footer height */
+}
+
+#logo-container {
+  margin: 10px 0;
+}
+.logo-image {
+  height: 100px;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; /* Useful for any “absolute” positioned elements inside */
+
+  /* Sizing */
+  height: calc(100vh - 126px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+.hero h2,
+.hero h3 {
+  color: #fff;
+  text-align: center;
+}
+
+.hero .btn {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Text styles */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+
+  /* Border styles */
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+.social-link {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #fcdb00;
+  border-radius: 5px;
+  text-align: center;
+  color: #000;
+  i {
+    line-height: 30px;
+  }
+}
+.social-link:hover {
+  color: #fff;
+}
+
+.navbar {
+  background-color: #fcdb00;
+}
+
+.navbar-collapse {
+  text-align: right;
+}
+
+.nav-container,
+.footer .float-right {
+  float: right;
+}
+
+nav h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+nav a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.btn-primary-2 {
+  background-color: #fff;
+  color: #000;
+
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-decoration: none;
+  font-size: 1.5em;
+
+  /* Border styles */
+  border: 3px solid #000;
+  border-radius: 5px;
+}
+
+/* Heart of the matter */
+@media (min-width: 768px) {
+  .ten-columns > .col-sm-20 {
+    width: 19%;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .ten-columns > .col-sm-20 {
+    width: 100%;
+  }
+
+  .hero .btn {
+    width: 50%;
+  }
+}
+
+/******* ABOUT *********/
+.hero-about {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/images/PSX_20190611_100301.jpg) no-repeat center;
+  background-size: cover;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.club-officals ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+
+  li {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    padding-bottom: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fcdb00;
+    /* margin-top: 20px; */
+    margin: 20px auto;
+  }
+
+  li img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  li h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5vw;
+  }
+}
+
+#jumbotron-join {
+  background-color: #fcdb00;
+  margin-bottom: auto;
+}
+
+#jumbotron-join .btn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+/******* END ABOUT *********/
+
+/******* CONTACT ***********/
+.hero-contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/images/contact-us.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.contact-social-link {
+  width: 30px;
+  height: 30px;
+  background-color: #fcdb00;
+  border-radius: 15px;
+  text-align: center;
+  color: #000;
+  display: block;
+  margin: 0 auto;
+  i {
+    line-height: 30px;
+  }
+}
+.social-link:hover {
+  color: #fff;
+}
+
+/******* END CONTACT *******/
+
+/******* HOME *******/
+.hero-home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/images/jvt-9423-v2.jpg) no-repeat center;
+}
+
+.welcome {
+  text-align: center;
+}
+.welcome h1,
+.welcome h3 {
+  text-transform: uppercase;
+}
+
+.container-tournaments {
+  background-color: #fcdb00;
+  padding: 30px 0;
+}
+
+.container-tournaments h1 {
+  margin: 0 auto;
+}
+
+.tournament {
+  flex-direction: column;
+}
+
+.square {
+  height: 200px;
+  border: 3px solid #000;
+  margin: 3px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+/******* END HOME *******/
+
+/******* TRAINING *******/
+.hero-training {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images//training-2.jpeg") no-repeat center;
+  background-size: cover;
+}
+
+#map {
+  width: auto;
+  height: 200px;
+}
+/******* END TRAINING *******/

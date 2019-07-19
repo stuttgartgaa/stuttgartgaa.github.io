@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     // Display bundle stats
-    new webpackBundleAnalyzer.BundleAnalyzerPlugin({ analyzerMode: "static" }),
+    //new webpackBundleAnalyzer.BundleAnalyzerPlugin({ analyzerMode: "static" }),
 
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css"
@@ -58,21 +58,13 @@ module.exports = {
         test: /\.s?[ac]ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: "css-loader", options: { url: false, sourceMap: true } },
-          { loader: "sass-loader", options: { sourceMap: true } }
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
         ]
       },
       {
         test: /\.(png|jp(e*)g|svg)$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8000, // Convert images < 8kb to base64 strings
-              name: "images/[hash]-[name].[ext]"
-            }
-          }
-        ]
+        use: ["file-loader"]
       }
     ]
   }
