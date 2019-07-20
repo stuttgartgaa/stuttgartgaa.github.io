@@ -1,1 +1,0 @@
-# stuttgartgaa.github.io
