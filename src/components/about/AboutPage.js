@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Hero from "../common/hero/AboutHero";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Hero from '../common/hero/AboutHero';
 
 const AboutPage = () => (
   <div>
@@ -11,14 +11,14 @@ const AboutPage = () => (
           <h2>Club History</h2>
           <p>
             Stuttgart GAA was founded in 2016, fully affiliated with Gaelic
-            Athletic Association since then and are growing every year. Word
-            began to travel around the city that a GAA team had been created in
-            Stuttgart and sure enough this attracted players from all regions of
-            the world. The GAA team has offered a great opportunity to spread
-            the knowledge and skills hurling has to offer while creating a great
-            group of friends. Stuttgart GAA always welcomes new players/members
-            who would like to contribute to the club! Please contact us for any
-            further information.
+            Athletic Association (GAA) since then and are growing every year.
+            Word began to travel around the city that a GAA team had been
+            created in Stuttgart and sure enough this attracted players from all
+            regions of the world. The GAA team has offered a great opportunity
+            to spread the knowledge and skills hurling has to offer while
+            creating a great group of friends. Stuttgart GAA always welcomes new
+            players/members who would like to contribute to the club! Please
+            contact us for any further information.
           </p>
           <p>Stuttgart Abú.</p>
           <h2>Crest</h2>
@@ -38,37 +38,44 @@ const AboutPage = () => (
           </p>
           <h2>What is Hurling?</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            risus felis, commodo a nunc non, mattis suscipit risus. Duis
-            eleifend, metus sit amet ultrices laoreet, massa mi elementum
-            lectus, vitae elementum tortor arcu eget urna. In viverra vel massa
-            sed aliquet. Nullam finibus, tortor in feugiat consequat, erat orci
-            elementum enim, non ultricies dolor nibh sollicitudin enim. Aenean
-            non suscipit dui. Quisque eleifend accumsan mi, a ultricies libero
-            pellentesque a. Fusce efficitur nibh non purus vestibulum malesuada.
-            Donec faucibus ullamcorper rhoncus. Vestibulum dolor ante, malesuada
-            vel tincidunt et, vulputate vitae leo. Sed id posuere metus. Nam
-            dictum sit amet nibh eget rhoncus. Aliquam tincidunt arcu vitae
-            magna congue accumsan.
+            Hurling is an outdoor team game of ancient Gaelic and Irish origin.
+            It is administered by the Gaelic Athletic Association (GAA). The
+            object of the game is for players to use a wooden (ash) stick called
+            a hurl/hurley to hit a small ball called a sliotar between the
+            opponents goalposts either over the crossbar for one point, or under
+            the crossbar into a net guarded by a goalkeeper for one goal, which
+            is equivalent to three points.
+          </p>
+          <p>
+            The sliotar can be caught in the hand and carried for not more than
+            four steps, struck in the air, or struck on the ground with the
+            hurl. It can be kicked, or slapped with an open hand (the hand pass)
+            for short-range passing. A player who wants to carry the ball for
+            more than four steps has to bounce or balance the sliotar on the end
+            of the stick, and the ball can only be handled twice while in his
+            possession.
+          </p>
+          <p>
+            No protective padding is worn by players. A plastic protective
+            helmet with a faceguard is mandatory
+          </p>
+          <p>
+            Hurling is played throughout the world, and is popular among members
+            of the Irish diaspora in North America, Europe, Australia, New
+            Zealand, South Africa, Argentina, and South Korea. Hurling is
+            becoming more popular every year in Germany thanks to the many clubs
+            in the country.
           </p>
           <h2>What is Camogie?</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            risus felis, commodo a nunc non, mattis suscipit risus. Duis
-            eleifend, metus sit amet ultrices laoreet, massa mi elementum
-            lectus, vitae elementum tortor arcu eget urna. In viverra vel massa
-            sed aliquet. Nullam finibus, tortor in feugiat consequat, erat orci
-            elementum enim, non ultricies dolor nibh sollicitudin enim. Aenean
-            non suscipit dui. Quisque eleifend accumsan mi, a ultricies libero
-            pellentesque a. Fusce efficitur nibh non purus vestibulum malesuada.
-            Donec faucibus ullamcorper rhoncus. Vestibulum dolor ante, malesuada
-            vel tincidunt et, vulputate vitae leo. Sed id posuere metus. Nam
-            dictum sit amet nibh eget rhoncus. Aliquam tincidunt arcu vitae
-            magna congue accumsan.
+            Camogie is an Irish stick-and-ball team sport played by women; it is
+            almost identical to the game of hurling played by men with a few
+            different rules. Camogie is played by 100,000 women in Ireland and
+            worldwide, largely among Irish communities.
           </p>
         </div>
         <div className="col-md-4 club-officals">
-          <h2>Club Officials</h2>
+          <h2 className="text-center">Club Officials</h2>
           <ul>
             <li>
               <h3>Club Chairperson</h3>

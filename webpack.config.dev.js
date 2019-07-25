@@ -1,35 +1,33 @@
-const webpack = require("webpack");
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-process.env.NODE_ENV = "development";
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+process.env.NODE_ENV = 'development';
 
 module.exports = {
-  mode: "development",
-  target: "web",
-  devtool: "cheap-module-source-map",
-  entry: "./src/index",
+  mode: 'development',
+  target: 'web',
+  devtool: 'cheap-module-source-map',
+  entry: './src/index',
   output: {
-    path: path.resolve(__dirname, "build"),
-    publicPath: "/",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   devServer: {
-    stats: "minimal",
+    stats: 'minimal',
     overlay: true,
     historyApiFallback: true,
     disableHostCheck: true,
-    headers: { "Access-Control-Allow-Origin": "*" },
+    headers: { 'Access-Control-Allow-Origin': '*' },
     https: false
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "src/index.html",
-      favicon: "src/favicon.ico"
+    new webpack.DefinePlugin({
+      'process.env.API_URL': JSON.stringify('http://localhost:3001')
     }),
-    new MiniCssExtractPlugin({
-      filename: "bundle.css"
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      favicon: 'src/favicon.ico'
     })
   ],
   module: {
@@ -37,7 +35,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader", "eslint-loader"]
+        use: ['babel-loader', 'eslint-loader']
       },
       // {
       //   test: /(\.css)$/,
@@ -47,10 +45,10 @@ module.exports = {
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: "url-loader",
+            loader: 'url-loader',
             options: {
               limit: 8192,
-              fallback: "file-loader"
+              fallback: 'file-loader'
             }
           }
         ]
@@ -60,24 +58,17 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            // After all CSS loaders we use plugin to do his work.
-            // It gets all transformed CSS and extracts it into separate
-            // single bundled file
-            loader: MiniCssExtractPlugin.loader
+            loader: 'style-loader'
           },
           {
             // This loader resolves url() and @imports inside CSS
-            loader: "css-loader"
+            loader: 'css-loader'
           },
-          // {
-          //   // Then we apply postCSS fixes like autoprefixer sand minifying
-          //   loader: "postcss-loader"
-          // },
           {
             // First we transform SASS to standard CSS
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
-              implementation: require("sass")
+              implementation: require('sass')
             }
           }
         ]

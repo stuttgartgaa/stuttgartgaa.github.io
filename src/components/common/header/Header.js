@@ -1,10 +1,10 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
-import Logo from "../../../images/stuttgart_logo-512x512.png";
+import Logo from '../../../images/stuttgart_logo-512x512.png';
 
 const Header = () => {
-  const activeStyle = { color: "#fff" };
+  const activeStyle = { color: '#fff' };
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <Link to="/" className="navbar-brand">
@@ -30,19 +30,19 @@ const Header = () => {
           <NavLink to="/" activeStyle={activeStyle} exact>
             Home
           </NavLink>
-          {"  "}
+          {'  '}
           <NavLink to="/about" activeStyle={activeStyle}>
             About
           </NavLink>
-          {"  "}
+          {'  '}
           <NavLink to="/training" activeStyle={activeStyle}>
             Training
           </NavLink>
-          {"  "}
-          <NavLink to="/news" activeStyle={activeStyle}>
+          {'  '}
+          {/* <NavLink to="/news" activeStyle={activeStyle}>
             News
-          </NavLink>
-          {"  "}
+          </NavLink> */}
+          {'  '}
           <NavLink to="/contact" activeStyle={activeStyle}>
             Contact
           </NavLink>

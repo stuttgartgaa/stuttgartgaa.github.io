@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Hero from "../common/hero/ContactHero";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Hero from '../common/hero/ContactHero';
 
 class ContactPage extends Component {
   render() {
@@ -11,13 +11,17 @@ class ContactPage extends Component {
           <div className="row mt-5 mb-5">
             <div className="col-md-6">
               <h2>Contact Us Today</h2>
-              <form>
+              <form
+                action="https://formspree.io/secretary.stuttgart.europe@gaa.ie"
+                method="POST"
+              >
                 <div className="form-group">
                   <label htmlFor="fullNameInput">Name</label>
                   <input
                     type="text"
                     className="form-control"
                     id="fullNameInput"
+                    name="name"
                   />
                 </div>
                 <div className="form-group">
@@ -29,6 +33,7 @@ class ContactPage extends Component {
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="name@example.com"
+                    name="email"
                   />
                   <small id="emailHelp" className="form-text text-muted">
                     We will never share your email with anyone else.
@@ -41,6 +46,7 @@ class ContactPage extends Component {
                     className="form-control"
                     id="subjectInput"
                     placeholder=""
+                    name="subject"
                   />
                 </div>
                 <div className="form-group">
@@ -49,6 +55,7 @@ class ContactPage extends Component {
                     className="form-control"
                     id="contactTextarea"
                     rows="3"
+                    name="comment"
                   />
                 </div>
                 <div className="form-check">
@@ -74,19 +81,19 @@ class ContactPage extends Component {
                 O&apos;Reilly&apos;s
               </p>
               <p>
-                Secretary:{" "}
+                Secretary:{' '}
                 <a href="mailTo:secretary.stuttgart.europe@gaa.ie">
                   secretary.stuttgart.europe@gaa.ie
                 </a>
               </p>
               <p>
-                Chairperson:{" "}
+                Chairperson:{' '}
                 <a href="mailTo:chairperson.stuttgart.europe@gaa.ie">
                   chairperson.stuttgart.europe@gaa.ie
                 </a>
               </p>
               <p>
-                Treasurer:{" "}
+                Treasurer:{' '}
                 <a href="mailTo:treasurer.stuttgart.europe@gaa.ie">
                   treasurer.stuttgart.europe@gaa.ie
                 </a>

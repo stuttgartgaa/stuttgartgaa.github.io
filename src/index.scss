@@ -1,9 +1,22 @@
 // Override default variables before the import
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import "./src/styles/custom.scss";
-@import "~bootstrap/scss/bootstrap";
-y #app {
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import './src/styles/custom.scss';
+@import '~bootstrap/scss/bootstrap';
+
+head,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+#app {
   position: relative;
   min-height: 100vh;
 }
@@ -94,7 +107,7 @@ y #app {
 }
 
 nav h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 nav a {
@@ -140,7 +153,7 @@ nav a {
 /******* ABOUT *********/
 .hero-about {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/src/images/PSX_20190611_100301.jpg) no-repeat center;
+    url(./images/PSX_20190611_100301.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -207,7 +220,7 @@ li {
 /******* CONTACT ***********/
 .hero-contact {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/src/images/contact-us.jpg) no-repeat center;
+    url(./images/contact-us.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -233,7 +246,7 @@ li {
 /******* HOME *******/
 .hero-home {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/src/images/jvt-9423-v2.jpg) no-repeat center;
+    url(./images/jvt-9423-v2.jpg) no-repeat center;
 }
 
 .welcome {
@@ -246,7 +259,6 @@ li {
 
 .container-tournaments {
   background-color: #fcdb00;
-  padding: 30px 0;
 }
 
 .container-tournaments h1 {
@@ -271,7 +283,7 @@ li {
 /******* TRAINING *******/
 .hero-training {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./images//training-2.jpeg") no-repeat center;
+    url(./images/training_2.jpg) no-repeat center;
   background-size: cover;
 }
 

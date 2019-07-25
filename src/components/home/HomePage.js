@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Hero from "../common/hero/HomeHero";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Hero from '../common/hero/HomeHero';
 
-import Sponsor from "../../images/sponsor.png";
+import Sponsor from '../../images/sponsor.png';
 
 const HomePage = () => (
   <div>
@@ -18,11 +18,11 @@ const HomePage = () => (
         Learn More
       </Link>
     </div>
-    <div className="container-fluid container-tournaments">
+    <div className="container-fluid container-tournaments py-5">
       <div className="row no-gutters">
         <div className="col-12">
           <div className="container">
-            <div className="row justify-content-md-center">
+            <div className="row justify-content-md-center pb-md-5">
               <h1 className="text-uppercase">Tournaments</h1>
             </div>
             <div className="row ten-columns">
